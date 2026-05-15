@@ -1,0 +1,128 @@
+<!Doctype html>
+<html>
+<head>
+	<meta http-equiv="content-type"
+	content="text/html; charset=utf-8"/>
+	<title>
+	 Farben unterscheiden
+	</title>
+    <style>
+        .levelButton{
+            position: fixed;
+            left: 8px;
+            width: 80px;
+            height: 25px;
+            background-color: white;
+        }
+        .farbButton {
+            width: 100px;
+            height: 95px;
+        }
+        .punkte {
+            position: fixed;
+            right: 8px;
+            top: 7px;
+            font-size: 20px;
+            background-color: gold;
+        }
+    </style>
+    <script>
+        function checkFarbe(farbenWert) {
+            if (farbenWert == 1) {
+                updateScore(1);
+                alert("Richtig!")
+            }
+            else {
+                updateScore(-1);
+                alert("Falsch!")
+            }
+        }
+        function springen(sprung) {
+            if (sprung == 1) {
+                window.location.replace("#Level_1")
+            }
+            else {
+                if (sprung == 2) {
+                window.location.replace("#Level_2")
+                }
+                else {
+                    if (sprung == 3) {
+                        window.location.replace("#Level_3")
+                    }
+                    else {
+                        if (sprung == 4) {
+                            window.location.replace("#Level_4")
+                        }
+                        else {
+                            if (sprung == 5) {
+                                window.location.replace("#Level_5")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button style="top: 25%;" class="levelButton" onclick="springen(1);">Level 1</button>
+    <button style="top: 35%;" class="levelButton" onclick="springen(2);">Level 2</button>
+    <button style="top: 45%;" class="levelButton" onclick="springen(3);">Level 3</button>
+    <button style="top: 55%;" class="levelButton" onclick="springen(4);">Level 4</button>
+    <button style="top: 65%;" class="levelButton" onclick="springen(5);">Level 5</button>
+    <button class="punkte" id="score" onclick="resetScore();">0</button>
+    <p style="font-size: 30px; text-align: center;" id="Level_1">Welche Farbe unterscheidet sich von den anderen?</p><br/><br/>
+    </p>
+    <p style="text-align: center; margin: 100px;">
+    <p style="font-size: 25px; text-align: center;">
+    <input type="button" class="farbButton" style="background-color: rgb(161, 104, 0);" onclick="checkFarbe(2);">
+    <input type="button" class="farbButton" style="background-color: rgb(161, 104, 0);" onclick="checkFarbe(2);">
+    <input type="button" class="farbButton" style="background-color: rgb(175, 104, 0);" onclick="checkFarbe(1);">
+    </p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br id="Level_2"/><br/><br/><br/>
+
+    <p style="font-size: 25px; text-align: center;">Level 2</p>
+    <p style="text-align: center; margin: 100px;">
+    <input type="button" class="farbButton" style="background-color: rgb(63, 1, 163);" onclick="checkFarbe(1);">
+    <input type="button" class="farbButton" style="background-color: rgb(51, 0, 160);" onclick="checkFarbe(2);">
+    <input type="button" class="farbButton" style="background-color: rgb(51, 0, 160);" onclick="checkFarbe(2);">
+    </p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br id="Level_3"/><br/><br/><br/>
+
+        <p style="font-size: 25px; text-align: center;">Level 3</p>
+    <p style="text-align: center; margin: 100px;">
+    <input type="button" class="farbButton" style="background-color: rgb(43, 81, 57);" onclick="checkFarbe(2);">
+    <input type="button" class="farbButton" style="background-color: rgb(55, 82, 54);" onclick="checkFarbe(1);">
+    <input type="button" class="farbButton" style="background-color: rgb(43, 81, 57);" onclick="checkFarbe(2);">
+    </p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br id="Level_4"/><br/><br/><br/>
+
+        <p style="font-size: 25px; text-align: center;">Level 4</p>
+    <p style="text-align: center; margin: 100px;">
+    <input type="button" class="farbButton" style="background-color: rgb(164, 104, 0);" onclick="checkFarbe(1);">
+    <input type="button" class="farbButton" style="background-color: rgb(175, 104, 0);" onclick="checkFarbe(2);">
+    <input type="button" class="farbButton" style="background-color: rgb(175, 104, 0);" onclick="checkFarbe(2);">
+    </p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br id="Level_5"/><br/><br/><br/>
+
+        <p style="font-size: 25px; text-align: center;">Level 5</p>
+    <p style="text-align: center; margin: 100px;">
+    <input type="button" class="farbButton" style="background-color: rgb(34, 34, 34);" onclick="checkFarbe(2);">
+    <input type="button" class="farbButton" style="background-color: rgb(34, 34, 31);" onclick="checkFarbe(1);">
+    <input type="button" class="farbButton" style="background-color: rgb(34, 34, 34);" onclick="checkFarbe(2);">
+    </p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+    <script>
+        let count = 0;
+
+        const scoreDisplay = document.getElementById('score');
+
+        function updateScore(point) {
+            count = count + point;
+            scoreDisplay.textContent = count;
+        }
+
+        function resetScore() {
+            count = 0;
+            scoreDisplay.textContent = count;
+        }
+
+    </script>
+</body>
+</html>
