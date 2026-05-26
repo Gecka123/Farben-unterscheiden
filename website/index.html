@@ -60,7 +60,12 @@
                             else {
                                 if (sprung == 6) {
                                 window.location.replace("#Level_6")
-                                }  
+                                }
+                                else {
+                                    if (sprung == 7) {
+                                        window.location.replace("#Level_7")
+                                    }  
+                                }
                             }
                         }
                     }
@@ -76,6 +81,7 @@
     <button style="top: 55%;" class="levelButton" onclick="springen(4);">Level 4</button>
     <button style="top: 65%;" class="levelButton" onclick="springen(5);">Level 5</button>
     <button style="top: 75%;" class="levelButton" onclick="springen(6);">Level 6</button>
+    <button style="top: 85%;" class="levelButton" onclick="springen(7);">Level 7</button>
     <button class="punkte" id="score" onclick="resetScore();">0</button>
     <p style="font-size: 30px; text-align: center;" id="Level_1">Welche Farbe unterscheidet sich von den anderen?</p><br/><br/>
     </p>
@@ -116,6 +122,13 @@
     </p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br id="Level_6"/><br/><br/><br/>
 
         <p style="font-size: 25px; text-align: center;">Level 6</p>
+    <p style="text-align: center; margin: 100px;">
+    <input type="button" class="farbButton" style="background-color: rgb(251, 60, 68);" onclick="checkFarbe(1);">
+    <input type="button" class="farbButton" style="background-color: rgb(252, 68, 68);" onclick="checkFarbe(2);">
+    <input type="button" class="farbButton" style="background-color: rgb(252, 68, 68);" onclick="checkFarbe(2);">
+    </p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br id="Level_7"/><br/><br/><br/>
+
+        <p style="font-size: 25px; text-align: center;">Level 7</p>
     <p style="text-align: center; margin: 100px;">
     <input type="button" class="farbButton" style="background-color: rgb(251, 60, 68);" onclick="checkFarbe(1);">
     <input type="button" class="farbButton" style="background-color: rgb(252, 68, 68);" onclick="checkFarbe(2);">
